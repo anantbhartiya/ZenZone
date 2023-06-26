@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:zenzone/screens/homescreen.dart';
+import 'package:zenzone/screens/signupscreen.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/theme.dart';
 
@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(builder: (context) => const SignUpScreen()),
       );
     });
   }
