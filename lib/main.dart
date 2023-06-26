@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
 import 'package:zenzone/screens/splashscreeen.dart';
+import 'package:zenzone/utils/theme.dart';
 
 void main() {
   runApp(const MyApp());
