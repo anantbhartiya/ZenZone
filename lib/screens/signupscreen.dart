@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:zenzone/screens/homescreen.dart';
+import 'package:zenzone/screens/loginscreen.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/theme.dart';
 
@@ -7,7 +9,6 @@ class SignUpScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: greentheme,
       body: SingleChildScrollView(
@@ -86,7 +87,10 @@ class SignUpScreen extends StatelessWidget {
               ),
               SizedBox(height: getProportionateScreenHeight(15),),
               GestureDetector(
-                onTap: () {},
+                onTap: () => Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                ),
                 child: Container(
                   padding: EdgeInsets.all(getProportionateScreenHeight(15)),
                   margin: EdgeInsets.symmetric(horizontal: getProportionateScreenHeight(15)),
@@ -114,9 +118,15 @@ class SignUpScreen extends StatelessWidget {
                     style: regularTextStyle.copyWith(color: Colors.grey[700]),
                   ),
                   SizedBox(width: getProportionateScreenWidth(4)),
-                  Text(
-                    'Sign In',
-                    style: boldTextStyle.copyWith(color: Colors.blue,),
+                  GestureDetector(
+                    onTap: () => Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => const LogInScreen()),
+                    ),
+                    child: Text(
+                      'Sign In',
+                      style: boldTextStyle.copyWith(color: Colors.blue,),
+                    ),
                   ),
                 ],
               ),

@@ -17,10 +17,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    navigateToHomeScreen();
+    navigateToSignUpScreen();
   }
 
-  void navigateToHomeScreen() {
+  void navigateToSignUpScreen() {
     Timer(const Duration(seconds: 2), () {
       Navigator.pushReplacement(
         context,
@@ -33,7 +33,6 @@ class _SplashScreenState extends State<SplashScreen> {
   
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
