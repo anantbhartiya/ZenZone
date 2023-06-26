@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:zenzone/screens/loginscreen.dart';
 import 'package:zenzone/screens/signupscreen.dart';
 import 'package:zenzone/utils/size_config.dart';
 
