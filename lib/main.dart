@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:zenzone/screens/signupscreen.dart';
+import 'package:zenzone/screens/splashscreen.dart';
 import 'package:zenzone/utils/size_config.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const SignUpScreen(),
+      home: const SplashScreen(),
     );
   }
 }

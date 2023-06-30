@@ -21,7 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   void navigateToSignUpScreen() {
-    Timer(const Duration(seconds: 2), () {
+    Timer(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const SignUpScreen()),
@@ -41,10 +41,10 @@ class _SplashScreenState extends State<SplashScreen> {
             children: [
               SizedBox(height: getProportionateScreenHeight(100)),
               Image.asset('assets/splashscreen-1.png'),
-              SizedBox(height: getProportionateScreenHeight(50)),
+              SizedBox(height: getProportionateScreenHeight(30)),
               Text(
                 "Welcome",
-                style: regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(30)),
+                style: semiboldTextStyle.copyWith(fontSize: getProportionateScreenHeight(30)),
               ),
             ],
           ),
