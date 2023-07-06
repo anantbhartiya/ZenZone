@@ -12,8 +12,9 @@ class Question {
 class Option {
   final String id;
   final String label;
+  final String description;
 
-  Option(this.id, this.label);
+  Option(this.id, this.label, this.description);
 }
 
 class QuestionCard extends StatelessWidget {
@@ -32,10 +33,6 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    // final index = cardColors.length > 0 ? cardColors.length % question.hashCode : 0;
-    // final cardColor = cardColors[index];
-
     return Container(
       padding: EdgeInsets.symmetric(
         horizontal: getProportionateScreenWidth(17),
@@ -92,12 +89,16 @@ class OptionWidget extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.symmetric(
+          vertical: getProportionateScreenHeight(6),
+          horizontal: getProportionateScreenWidth(3)
+        ),
         child: Container(
           decoration: BoxDecoration(
-            color: isSelected ? cardColor.withOpacity(0.5) : Colors.white,
-            border: Border.all(color: blacktheme.withOpacity(0.5)),
-            borderRadius: BorderRadius.circular(30)
+            color: isSelected ? cardColor : Colors.white,
+            backgroundBlendMode: isSelected ? BlendMode.softLight : null,
+            border: Border.all(color: blacktheme),
+            borderRadius: BorderRadius.circular(15)
           ),
           child: Row(
             children: [
@@ -109,7 +110,7 @@ class OptionWidget extends StatelessWidget {
               ),
               Text(
                 option.label,
-                style: regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(15))
+                style: isSelected ? boldTextStyle.copyWith(fontSize: getProportionateScreenHeight(17)) : regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(16))
               ),
             ],
           ),
