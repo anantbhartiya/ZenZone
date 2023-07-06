@@ -35,7 +35,6 @@ class _HomeScreenState extends State<HomeScreen> {
               "Hello Anant",
               style: regularTextStyle.copyWith(
                 fontSize: getProportionateScreenHeight(20),
-                color: blacktheme,
               ),
             ),
             Text(
