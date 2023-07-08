@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:zenzone/screens/assess_screen.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/theme.dart';
+import 'package:zenzone/utils/userdata.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,6 +15,8 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
+    final userData = Provider.of<UserData>(context);
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -32,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hello Anant",
+              "Hello ${userData.firstName}",
               style: regularTextStyle.copyWith(
                 fontSize: getProportionateScreenHeight(20),
               ),

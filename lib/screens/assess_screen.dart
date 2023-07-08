@@ -1,6 +1,8 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:zenzone/utils/userdata.dart';
 import 'package:zenzone/widgets/questioncard.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/theme.dart';
@@ -185,6 +187,8 @@ class _AssessScreenState extends State<AssessScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final userData = Provider.of<UserData>(context);
+
     return Scaffold(
       key: scaffoldKey,
       appBar: AppBar(
@@ -196,7 +200,7 @@ class _AssessScreenState extends State<AssessScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Hey Anant",
+              "Hey ${userData.firstName}",
               style: regularTextStyle.copyWith(
                 fontSize: getProportionateScreenHeight(20),
                 color: blacktheme,
