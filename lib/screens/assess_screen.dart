@@ -207,7 +207,7 @@ class _AssessScreenState extends State<AssessScreen> {
               ),
             ),
             Text(
-              "Assess Yourself",
+              "Assess your self now!",
               style: regularTextStyle.copyWith(
                 fontSize: getProportionateScreenHeight(10),
                 color: Colors.grey,

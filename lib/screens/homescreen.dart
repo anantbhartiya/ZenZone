@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zenzone/screens/assess_screen.dart';
+import 'package:zenzone/widgets/card1.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/theme.dart';
 import 'package:zenzone/utils/userdata.dart';
@@ -62,38 +63,10 @@ class _HomeScreenState extends State<HomeScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
-                    height: getProportionateScreenHeight(100),
-                    width: getProportionateScreenWidth(80),
-                    decoration: BoxDecoration(
-                      color: greentheme,
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                  ),
-                  Container(
-                    height: getProportionateScreenHeight(100),
-                    width: getProportionateScreenWidth(80),
-                    decoration: BoxDecoration(
-                      color: pinktheme,
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                  ),
-                  Container(
-                    height: getProportionateScreenHeight(100),
-                    width: getProportionateScreenWidth(80),
-                    decoration: BoxDecoration(
-                      color: yellowtheme,
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                  ),
-                  Container(
-                    height: getProportionateScreenHeight(100),
-                    width: getProportionateScreenWidth(80),
-                    decoration: BoxDecoration(
-                      color: bluetheme,
-                      borderRadius: BorderRadius.circular(20)
-                    ),
-                  ),
+                  Card1(color: greentheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
+                  Card1(color: pinktheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
+                  Card1(color: yellowtheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
+                  Card1(color: bluetheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
                 ],
               ),
               SizedBox(height: getProportionateScreenHeight(20),),
@@ -137,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Text(
-                              'Assess Yourself',
+                              'Assess Your Self',
                               style: regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(18)),
                             ),
                             Text(
