@@ -24,15 +24,6 @@ class _HomeScreenState extends State<HomeScreen> {
         shape: Border(
           bottom: BorderSide(color: blacktheme, width: 0.5)
         ),
-        actions: [
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
-            child: Icon(
-              Icons.account_circle_rounded,
-              size: getProportionateScreenHeight(35),
-            ),
-          )
-        ],
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

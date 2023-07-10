@@ -12,6 +12,7 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final userData = Provider.of<UserData>(context);
+    String name = '';
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -59,7 +60,7 @@ class SplashScreen extends StatelessWidget {
                     )
                   ),
                   onChanged: (value) {
-                    userData.splitFullName(value);
+                    name = value.trim();
                   },
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
@@ -69,10 +70,31 @@ class SplashScreen extends StatelessWidget {
                     backgroundColor: blacktheme,
                   ),
                   onPressed: () {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(builder: (context) => const HomeScreen()),
-                    );
+                   if (name.isEmpty) {
+                      // Display an error if the name is empty
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Text('Error', style: regularTextStyle,),
+                            content: Text('Please enter your name.', style: regularTextStyle,),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.pop(context),
+                                child: Text('OK', style: regularTextStyle,),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    }
+                    else {
+                      userData.splitFullName(name);
+                      Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(builder: (context) => const HomeScreen()),
+                      );
+                    }
                   },
                   child: Text(
                     'Next',
