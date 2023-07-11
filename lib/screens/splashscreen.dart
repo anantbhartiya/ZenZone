@@ -36,7 +36,7 @@ class SplashScreen extends StatelessWidget {
                 TextField(
                   decoration: InputDecoration(
                     hintText: 'Enter your name',
-                    hintStyle: regularTextStyle.copyWith(
+                    hintStyle: lightTextStyle.copyWith(
                       fontSize: getProportionateScreenHeight(20),
                       color: Colors.grey[600]
                     ),
@@ -76,7 +76,7 @@ class SplashScreen extends StatelessWidget {
                         context: context,
                         builder: (context) {
                           return AlertDialog(
-                            title: Text('Error', style: regularTextStyle,),
+                            title: Text('Error', style: semiboldTextStyle,),
                             content: Text('Please enter your name.', style: regularTextStyle,),
                             actions: [
                               TextButton(

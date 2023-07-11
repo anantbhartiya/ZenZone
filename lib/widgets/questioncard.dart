@@ -49,7 +49,7 @@ class QuestionCard extends StatelessWidget {
         children: [
           Text(
             question.questionText,
-            style: boldTextStyle.copyWith(fontSize: getProportionateScreenHeight(15))
+            style: semiboldTextStyle.copyWith(fontSize: getProportionateScreenHeight(15))
           ),
           SizedBox(height: getProportionateScreenHeight(10)),
           ...question.options.map((option) {
@@ -110,7 +110,7 @@ class OptionWidget extends StatelessWidget {
               ),
               Text(
                 option.label,
-                style: isSelected ? boldTextStyle.copyWith(fontSize: getProportionateScreenHeight(17)) : regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(16))
+                style: isSelected ? semiboldTextStyle.copyWith(fontSize: getProportionateScreenHeight(17)) : regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(16))
               ),
             ],
           ),

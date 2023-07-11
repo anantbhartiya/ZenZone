@@ -44,7 +44,7 @@ class Card1 extends StatelessWidget {
             SizedBox(height: getProportionateScreenHeight(10)),
             Text(
               text,
-              style: regularTextStyle.copyWith(
+              style: lightTextStyle.copyWith(
                 fontSize: getProportionateScreenHeight(8),
                 color: Colors.grey[700]
               ),

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zenzone/screens/assess_screen.dart';
+import 'package:zenzone/screens/meditationscreen.dart';
 import 'package:zenzone/widgets/card1.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/theme.dart';
 import 'package:zenzone/utils/userdata.dart';
+import 'package:zenzone/widgets/card2.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -29,13 +31,13 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Text(
               "Hello ${userData.firstName}",
-              style: regularTextStyle.copyWith(
+              style: semiboldTextStyle.copyWith(
                 fontSize: getProportionateScreenHeight(20),
               ),
             ),
             Text(
               "Welcome to ZenZone",
-              style: regularTextStyle.copyWith(
+              style: lightTextStyle.copyWith(
                 fontSize: getProportionateScreenHeight(10),
                 color: Colors.grey,
               ),
@@ -66,57 +68,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: blacktheme,
               ),
               SizedBox(height: getProportionateScreenHeight(20),),
-              GestureDetector(
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const AssessScreen()),
-                ),
-                child: Container(
-                  height: 150,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: pinktheme,
-                  ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: getProportionateScreenWidth(15),
-                      vertical: getProportionateScreenHeight(10)
-                    ),
-                    child: Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: getProportionateScreenWidth(10),
-                            vertical: getProportionateScreenHeight(10)
-                          ),
-                          decoration: BoxDecoration(
-                            color: Colors.white70,
-                            borderRadius: BorderRadius.circular(20)
-                          ),
-                          child: Image.asset('assets/assess_stress.png'),
-                        ),
-                        SizedBox(width: getProportionateScreenWidth(20),),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            Text(
-                              'Assess Your Self',
-                              style: regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(18)),
-                            ),
-                            Text(
-                              'Assess you stress levels \nby answering a few \nquestions.',
-                              style: lightTextStyle.copyWith(
-                                fontSize: getProportionateScreenHeight(12),
-                                color: Colors.grey
-                              ),
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ),
+              Card2(
+                color: pinktheme,
+                image: 'assets/assess_stress.png',
+                title: 'Assess Your Self',
+                description: 'Assess your stress levels by answeing a few questions',
+                screen: const AssessScreen()
+              ),
+              SizedBox(height: getProportionateScreenHeight(20),),
+              Card2(
+                color: bluetheme,
+                image: 'assets/meditation.png',
+                title: 'Explore Meditation',
+                description: 'Discover Transformative Meditations for Inner Peace',
+                screen: const MeditationScreen()
               ),
             ]
           ),
