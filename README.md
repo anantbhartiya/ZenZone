@@ -1,16 +1,3 @@
 # zenzone
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ZenZone is a stress management app designed to help users assess and manage their stress levels through predictive analysis and meditation suggestions. The app provides an intuitive interface for users to answer a series of questions and based on their responses, predicts their stress levels. It also offers a curated selection of meditation sessions providing a calming and transformative experience.
