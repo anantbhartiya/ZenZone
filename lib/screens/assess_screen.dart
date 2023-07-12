@@ -22,32 +22,48 @@ class _AssessScreenState extends State<AssessScreen> {
 
   List<Question> questions = [
     Question(
-      'How would you rate your energy level today?',
+      'How often do you experience difficulty falling asleep?',
       [
-        Option('option1', 'Low', 'My energy level is low'),
-        Option('option2', 'Medium', 'My energy level is medium'),
-        Option('option3', 'High', 'My energy level is High'),
+        Option('option1', 'Rarely ', 'I rarely have difficulty sleeping.'),
+        Option('option2', 'Occasionally', 'I sometimes experience difficulty falling asleep.'),
+        Option('option3', 'Frequently', 'I often have trouble falling asleep.'),
+        Option('option4', 'Almost every night', 'I struggle to fall asleep almost every night.'),
       ],
     ),
     Question(
-      'Did you engage in physical exercise today?',
+      'How frequently do you feel overwhelmed by your daily tasks?',
       [
-        Option('option1', 'Yes', 'Yes, I engaged in physical exercise today'),
-        Option('option2', 'No', 'No, I did not engage in physical exercise today'),
+        Option('option1', 'Rarely ', 'I rarely feel overwhelmed by my daily tasks.'),
+        Option('option2', 'Occasionally', 'I sometimes feel overwhelmed by my daily tasks.'),
+        Option('option3', 'Frequently', 'I often feel overwhelmed by my daily tasks.'),
+        Option('option4', 'Almost every day', 'I feel overwhelmed by my daily tasks almost every day.'),
       ],
     ),
     Question(
-      'Did you engage in physical exercise today?',
+      'How often do you experience physical symptoms such as headaches or muscle tension?',
       [
-        Option('option1', 'Yes', 'Yes, I engaged in physical exercise today'),
-        Option('option2', 'No', 'No, I did not engage in physical exercise today'),
+        Option('option1', 'Rarely ', 'I rarely experience physical symptoms like headaches or muscle tension.'),
+        Option('option2', 'Occasionally', 'I sometimes experience physical symptoms like headaches or muscle tension.'),
+        Option('option3', 'Frequently', 'I often experience physical symptoms like headaches or muscle tension.'),
+        Option('option4', 'Almost every day', 'I experience physical symptoms like headaches or muscle tension almost every day.'),
       ],
     ),
     Question(
-      'Did you engage in physical exercise today?',
+      'How frequently do you find it challenging to concentrate on tasks or make decisions?',
       [
-        Option('option1', 'Yes', 'Yes, I engaged in physical exercise today'),
-        Option('option2', 'No', 'No, I did not engage in physical exercise today'),
+        Option('option1', 'Rarely ', 'I rarely find it challenging to concentrate on tasks or make decisions.'),
+        Option('option2', 'Occasionally', 'I sometimes find it challenging to concentrate on tasks or make decisions.'),
+        Option('option3', 'Frequently', 'I often find it challenging to concentrate on tasks or make decisions.'),
+        Option('option4', 'Almost every day', 'I find it challenging to concentrate on tasks or make decisions almost every day.'),
+      ],
+    ),
+    Question(
+      'How often do you experience changes in appetite (either increased or decreased)?',
+      [
+        Option('option1', 'Rarely ', 'I rarely experience changes in appetite.'),
+        Option('option2', 'Occasionally', 'I rarely experience changes in appetite.'),
+        Option('option3', 'Frequently', 'I often experience changes in appetite.'),
+        Option('option4', 'Almost every day', 'I experience changes in appetite almost every day.'),
       ],
     ),
     // Add more questions and options as needed
