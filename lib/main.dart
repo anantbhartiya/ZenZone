@@ -1,6 +1,8 @@
-
 import 'package:flutter/material.dart';
-import 'package:zenzone/screens/splashscreeen.dart';
+import 'package:provider/provider.dart';
+import 'package:zenzone/screens/splashscreen.dart';
+import 'package:zenzone/utils/size_config.dart';
+import 'package:zenzone/utils/userdata.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,12 +14,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        useMaterial3: true,
+    SizeConfig().init(context);
+    return ChangeNotifierProvider(
+      create: (context) => UserData(),
+      child: MaterialApp(
+        theme: ThemeData(
+          useMaterial3: true,
+          visualDensity: VisualDensity.adaptivePlatformDensity
+        ),
+        home: const SplashScreen(),
       ),
-      home: const SplashScreen(),
     );
   }
 }
