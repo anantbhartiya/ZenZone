@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:zenzone/screens/assess_screen.dart';
 import 'package:zenzone/screens/meditationscreen.dart';
-import 'package:zenzone/widgets/card1.dart';
+// import 'package:zenzone/widgets/card1.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/theme.dart';
 import 'package:zenzone/utils/userdata.dart';
@@ -53,21 +53,21 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           child: Column(
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Card1(color: greentheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
-                  Card1(color: pinktheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
-                  Card1(color: yellowtheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
-                  Card1(color: bluetheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
-                ],
-              ),
-              SizedBox(height: getProportionateScreenHeight(20),),
-              Container(
-                height: 0.2,
-                color: blacktheme,
-              ),
-              SizedBox(height: getProportionateScreenHeight(20),),
+              // Row(
+              //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              //   children: [
+              //     Card1(color: greentheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
+              //     Card1(color: pinktheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
+              //     Card1(color: yellowtheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
+              //     Card1(color: bluetheme, icon: 'assets/brain_icon.png', text: 'Self Assess',),
+              //   ],
+              // ),
+              // SizedBox(height: getProportionateScreenHeight(20),),
+              // Container(
+              //   height: 0.2,
+              //   color: blacktheme,
+              // ),
+              // SizedBox(height: getProportionateScreenHeight(20),),
               Card2(
                 color: pinktheme,
                 image: 'assets/assess_stress.png',

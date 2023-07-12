@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:zenzone/screens/audioscreen.dart';
-import 'package:zenzone/screens/meditationscreen.dart';
 import 'package:zenzone/screens/splashscreen.dart';
 import 'package:zenzone/utils/size_config.dart';
 import 'package:zenzone/utils/userdata.dart';

@@ -58,14 +58,14 @@ class Card2 extends StatelessWidget {
                     SizedBox(height: getProportionateScreenHeight(20)),
                     Text(
                       title,
-                      style: regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(18)),
+                      style: regularTextStyle.copyWith(fontSize: getProportionateScreenHeight(17)),
                     ),
                     SizedBox(height: getProportionateScreenHeight(5)),
                     Flexible(
                       child: Text(
                         description,
                         style: lightTextStyle.copyWith(
-                          fontSize: getProportionateScreenHeight(12),
+                          fontSize: getProportionateScreenHeight(11.5),
                           color: Colors.grey
                         ),
                       ),
